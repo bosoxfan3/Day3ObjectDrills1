@@ -47,3 +47,21 @@ for (var key in myArray) {
 	let person = myArray[key];
 	console.log(`${person.name} ${person.job}`);
 }
+
+// 5. Properties that aren't there
+let myArray = [
+	{name: 'Bob', job: 'Janitor'},
+	{name: 'Sue', job: 'Lawyer', boss: 'Bob'},
+	{name: 'Aragorn', job: 'King', boss: 'Bob'},
+	{name: 'Dog', job: 'Bounty Hunter', boss: 'Bob'},
+	{name: 'Kim K', job: 'Do nothing', boss: 'Bob'}
+]
+
+for (var key in myArray) {
+	let person = myArray[key];
+	if (person.boss) {
+	console.log(`${person.job} ${person.name} reports to ${person.boss}`);
+	} else {
+	console.log(`${person.job} ${person.name} doesn't report to anyone`);
+	}
+}
