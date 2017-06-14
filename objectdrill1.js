@@ -34,4 +34,16 @@ const myObj = {meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'a
 
 console.log(myObj.meals[3]);
 
-// 4. 
+// 4. Arrays of Objects
+let myArray = [
+	{name: 'Bob', job: 'Janitor'},
+	{name: 'Sue', job: 'Lawyer'},
+	{name: 'Aragorn', job: 'King'},
+	{name: 'Dog', job: 'Bounty Hunter'},
+	{name: 'Kim K', job: 'Do nothing'}
+]
+
+for (var key in myArray) {
+	let person = myArray[key];
+	console.log(`${person.name} ${person.job}`);
+}
