@@ -67,7 +67,7 @@ for (var key in myArray) {
 }
 
 // Cracking the code (old)
-function decode(code) {
+/*function decode(code) {
     switch (code.charAt(0)) {
         case 'a': return code.charAt(1);
         case 'b': return code.charAt(2);
@@ -87,7 +87,7 @@ function breakup(sentance) {
 }
 
 breakup('craft block argon meter bells brown croon droop');
-
+*/
 // Cracking the code (new)
 
 function decode(code) {
@@ -141,8 +141,6 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
 	}
 }
 
-// Gandalf.describe();
-
 const characters = [
 	createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
 	createCharacter('Bilbo Baggins ', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
@@ -154,7 +152,7 @@ const characters = [
 
 characters.push(createCharacter('Arwen', 'arwen', 'Elf', 'Woodland Realm', 9, 6));
 
-characters.find(function(char){ return char.nickname === 'aragorn' }).describe()
+characters.find(function(char){ return char.nickname === 'aragorn' }).describe();
 
 let onlyHobbits = characters.filter(function(char){return char.race === 'Hobbit'});
 
